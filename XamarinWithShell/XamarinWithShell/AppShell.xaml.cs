@@ -19,5 +19,9 @@ namespace XamarinWithShell
         {
             await Shell.Current.GoToAsync("//LoginPage");
         }
+
+        private async void OnSaveMenuItemClicked(object sender, EventArgs e)
+        {
+        }
     }
 }

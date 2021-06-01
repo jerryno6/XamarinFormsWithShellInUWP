@@ -2,6 +2,10 @@
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:XamarinWithShell.Views"
+       xmlns:windows="clr-namespace:Xamarin.Forms.PlatformConfiguration.WindowsSpecific;assembly=Xamarin.Forms.Core"
+       FlyoutBehavior="Flyout"
+       windows:FlyoutPage.CollapseStyle="Partial"
+       windows:FlyoutPage.CollapsedPaneWidth="100"
        Title="XamarinWithShell"
        x:Class="XamarinWithShell.AppShell">
 
@@ -84,7 +88,10 @@
     <FlyoutItem Title="Browse" Icon="icon_feed.png">
         <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
     </FlyoutItem>
-
+    <FlyoutItem Title="Product Master Page" Icon="icon_feed.png">
+        <ShellContent Route="ProductsPage" ContentTemplate="{DataTemplate local:ProductMasterPage}" />
+    </FlyoutItem>
+    
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
     <MenuItem x:Name="saveMenuItem" Text="{Binding DisplayText}" StyleClass="MenuItemLayoutStyle" Clicked="OnSaveMenuItemClicked" />
     <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked" />

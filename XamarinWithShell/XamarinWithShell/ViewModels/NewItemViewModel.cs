@@ -52,7 +52,7 @@ namespace XamarinWithShell.ViewModels
             Item newItem = new Item()
             {
                 Id = Guid.NewGuid().ToString(),
-                Text = Text,
+                Name = Text,
                 Description = Description
             };
 
